@@ -1,0 +1,75 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+
+    .btn_container{
+        display: flex;
+        gap: 2rem;
+
+        .dbtn{
+            background-color: red;
+            border:none;
+            padding: 0.3rem 0.5rem;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+
+
+    h1{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    p{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+.upd_container{
+    display: none;
+    flex-direction: column;
+    width:100%;
+    gap: 20px;
+    margin: 2rem auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2rem;
+
+    input{
+        width: 80%;
+        padding: 0.5rem;
+        margin: auto;
+        border-radius: 10px;
+        border: 1px solid lightgrey;
+    }
+
+    .ubtn{
+        width: fit-content;
+        padding: 0.3rem 0.5rem;
+        margin: auto;
+    }
+}
+
+.ubtn{
+    background-color: rgb(255, 247, 97);
+    border:none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.active{
+    display: flex;
+}

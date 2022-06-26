@@ -1,0 +1,38 @@
+.navbar{
+    background-color: #47B5FF;
+    color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        li{
+            margin: 0 1rem;
+
+
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 500;
+                transition: all 0.2s ease-in-out;
+                &:hover{
+                    opacity: 0.5;   
+                }
+                
+            }
+
+            button{
+                background-color: #fff;
+                border: none;
+                padding: 0.5rem 0.7rem;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+        }
+    }
+}
