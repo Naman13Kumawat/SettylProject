@@ -1,8 +1,10 @@
 import "./Cards.scss";
 import axios from "axios";
 import { useState } from "react";
+import UpdateModal from "../UpdateModal/UpdateModal"
 
 export default function Cards({ user }) {
+  const [upd, setUpd] = useState(true);
 
   const deleteUser = async (id) => {
     try {
@@ -31,6 +33,7 @@ export default function Cards({ user }) {
         break;
       }
       case "updatetoggle":{
+        setUpd(!upd);
         break;
       }
       default:
@@ -40,6 +43,9 @@ export default function Cards({ user }) {
 
   return (
     <div className="card">
+      {upd?
+      (
+        <>
       <h1>
         <b>Username:</b> {user.first_name} {user.last_name}
       </h1>
@@ -48,6 +54,7 @@ export default function Cards({ user }) {
       </p>
       <div className="btn_container">
         <button
+          value={user._id}
           className="ubtn"
           name="updatetoggle"
           onClick={handleClick}
@@ -63,6 +70,13 @@ export default function Cards({ user }) {
           Delete
         </button>
       </div>
+      </>
+      ):
+      (<>
+        <UpdateModal setUpd={setUpd} upd={upd} user={user}/>
+      </>
+
+      )}
     </div>
   );
 }
